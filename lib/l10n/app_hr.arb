@@ -5,5 +5,8 @@
     "dateLabel": "Datum",
     "timeLabel": "Vrijeme",
     "pluralTitle": "Oblici množine",
-    "participantCount": "{count, plural, one{{count} polaznik} few{{count} polaznika} other{{count} polaznika}}"
+    "participantCount": "{count, plural, one{{count} polaznik} few{{count} polaznika} other{{count} polaznika}}",
+    "numberFormatsTitle": "Brojevi i valuta",
+    "numberLabel": "Broj",
+    "currencyLabel": "Iznos u eurima"
 }

@@ -12,5 +12,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "numberFormatsTitle": "Numbers and currency",
+    "numberLabel": "Number",
+    "currencyLabel": "Amount in euros"
 }

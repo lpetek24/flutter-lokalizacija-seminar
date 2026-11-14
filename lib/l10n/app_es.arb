@@ -5,5 +5,8 @@
     "dateLabel": "Fecha",
     "timeLabel": "Hora",
     "pluralTitle": "Formas del plural",
-    "participantCount": "{count, plural, one{{count} participante} other{{count} parcticipantes}}"
+    "participantCount": "{count, plural, one{{count} participante} other{{count} participantes}}",
+    "numberFormatsTitle": "Números y moneda",
+    "numberLabel": "Número",
+    "currencyLabel": "Importe en euros"
 }
