@@ -3,5 +3,14 @@
     "title": "Local date and time",
     "languageLabel": "Language",
     "dateLabel": "Date",
-    "timeLabel": "Time"
+    "timeLabel": "Time",
+    "pluralTitle": "Plural forms",
+    "participantCount": "{count, plural, one{{count} participant} other{{count} participants}}",
+    "@participantCount": {
+        "placeholders": {
+            "count": {
+                "type": "int"
+            }
+        }
+    }
 }

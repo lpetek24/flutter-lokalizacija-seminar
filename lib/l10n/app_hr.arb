@@ -3,5 +3,7 @@
     "title": "Lokalni datum i vrijeme",
     "languageLabel": "Jezik",
     "dateLabel": "Datum",
-    "timeLabel": "Vrijeme"
+    "timeLabel": "Vrijeme",
+    "pluralTitle": "Oblici množine",
+    "participantCount": "{count, plural, one{{count} polaznik} few{{count} polaznika} other{{count} polaznika}}"
 }

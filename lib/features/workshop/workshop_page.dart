@@ -1,6 +1,7 @@
 import 'package:material_ui/material_ui.dart';
 import '../../l10n/app_localizations.dart';
 import 'regional_formats.dart';
+import 'plural_examples.dart';
 
 class WorkshopPage extends StatelessWidget{
   const WorkshopPage({super.key, required this.onLocaleChanged});
@@ -75,6 +76,8 @@ class WorkshopPage extends StatelessWidget{
           ),
           const SizedBox(height: 24),
           const RegionalFormats(),
+          const SizedBox(height: 24),
+          const PluralExamples(),
         ],
       ),
     );
