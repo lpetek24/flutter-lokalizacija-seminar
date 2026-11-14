@@ -1,0 +1,7 @@
+{
+    "@@locale": "en",
+    "title": "Local date and time",
+    "languageLabel": "Language",
+    "dateLabel": "Date",
+    "timeLabel": "Time"
+}

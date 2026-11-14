@@ -1,12 +1,17 @@
 import 'package:material_ui/material_ui.dart';
+import '../../l10n/app_localizations.dart';
 
 class WorkshopPage extends StatelessWidget{
-  const WorkshopPage({super.key});
+  const WorkshopPage({super.key, required this.onLocaleChanged});
+
+  final ValueChanged<Locale> onLocaleChanged;
 
   @override
   Widget build(BuildContext context){
     final theme = Theme.of(context);
     final colors = theme.colorScheme;
+    final messages = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context);
 
     final now = DateTime.now();
     final formats = MaterialLocalizations.of(context);
@@ -17,11 +22,36 @@ class WorkshopPage extends StatelessWidget{
       backgroundColor: colors.surfaceContainerLowest,
       appBar: AppBar(
         backgroundColor: colors.surfaceContainerLowest,
-        title: const Text('Local date and time'),
+        title: Text(messages.title),
       ),
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: [
+          Text(messages.languageLabel, style: theme.textTheme.labelLarge),
+          DropdownButton<Locale>(
+            value: locale,
+            isExpanded: true,
+            items: const[
+              DropdownMenuItem(
+                value: Locale('en'),
+                child: Text('English'),
+              ),
+              DropdownMenuItem(
+                value: Locale('hr'),
+                child: Text('Hrvatski'),
+              ),
+              DropdownMenuItem(
+                value: Locale('es'),
+                child: Text('Español'),
+              ),
+            ],
+            onChanged: (selected){
+              if(selected != null){
+                onLocaleChanged(selected);
+              }
+            },
+          ),
+          const SizedBox(height: 24),
           Card(
             margin: EdgeInsets.zero,
             color: colors.primaryContainer,
@@ -31,11 +61,11 @@ class WorkshopPage extends StatelessWidget{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Date', style: theme.textTheme.labelLarge),
+                  Text(messages.dateLabel, style: theme.textTheme.labelLarge),
                   const SizedBox(height: 4),
                   Text(date, style: theme.textTheme.headlineMedium),
                   const SizedBox(height: 24),
-                  Text('Time', style: theme.textTheme.labelLarge),
+                  Text(messages.timeLabel , style: theme.textTheme.labelLarge),
                   const SizedBox(height: 4),
                   Text(time, style: theme.textTheme.headlineMedium),
                 ],
